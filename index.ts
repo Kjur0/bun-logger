@@ -449,7 +449,7 @@ export class Logger {
    * @param logLevel The logLevel for this `Logger` instance
    */
   public constructor(scope: string, logLevel: Partial<LogLevel> | LogLevelString);
-  public constructor(...args: any[]) {
+  public constructor(...args: unknown[]) {
     if (args.length === 1) {
       if (typeof args[0] === 'string') {
         if (
@@ -474,11 +474,11 @@ export class Logger {
         this.LOG_LEVEL = getLogLevel(undefined);
       } else {
         this.scope = '';
-        this.LOG_LEVEL = getLogLevel(args[0]);
+        this.LOG_LEVEL = getLogLevel(args[0] as Partial<LogLevel>);
       }
     } else {
       this.scope = args[0] ? `${args[0]}: ` : '';
-      this.LOG_LEVEL = getLogLevel(args[1]);
+      this.LOG_LEVEL = getLogLevel(args[1] as Partial<LogLevel> | LogLevelString);
     }
   }
 
@@ -492,7 +492,7 @@ export class Logger {
    * @param condition The condition to assert
    * @param data The data to print if assertion fails
    */
-  assert(condition: any, ...data: any[]): void {
+  assert(condition: boolean, ...data: unknown[]): void {
     if (!this.LOG_LEVEL.errors) return;
     if (!condition) console.write(this.scope, getLogTime());
     console.assert(condition, `${ANSI_COLORS.intenseRed}✘${ANSI_COLORS.red}`, ...data, ANSI_COLORS.reset);
@@ -553,7 +553,7 @@ export class Logger {
    * @param item The object to print
    * @param options Options to pass to `console.dir`
    */
-  dir(item: any, options?: { colors?: boolean; depth?: boolean; showHidden?: boolean }): void {
+  dir(item: unknown, options?: { colors?: boolean; depth?: boolean; showHidden?: boolean }): void {
     if (!this.LOG_LEVEL.info) return;
     console.write(this.scope, getLogTime(), '\n');
     console.dir(item, options);
@@ -568,7 +568,7 @@ export class Logger {
    *
    * @param data The object to print
    */
-  dirxml(...data: any[]): void {
+  dirxml(...data: unknown[]): void {
     if (!this.LOG_LEVEL.info) return;
     console.write(getLogTime(), '\n');
     console.dirxml(...data);
@@ -581,7 +581,7 @@ export class Logger {
    *
    * @param data The data to print
    */
-  debug(...data: any[]): void {
+  debug(...data: unknown[]): void {
     if (!this.LOG_LEVEL.verbose) return;
     console.write(getLogTime());
     console.debug(`${ANSI_COLORS.intenseCyan}⋯${ANSI_COLORS.cyan}`, ...data, ANSI_COLORS.reset);
@@ -594,7 +594,7 @@ export class Logger {
    *
    * @param data The data to print
    */
-  error(...data: any[]) {
+  error(...data: unknown[]) {
     if (!this.LOG_LEVEL.errors) return;
     console.write(getLogTime());
     console.error(`${ANSI_COLORS.intenseRed}✖${ANSI_COLORS.red}`, ...data, ANSI_COLORS.reset);
@@ -673,7 +673,7 @@ export class Logger {
    *
    * @param data The data to be printed
    */
-  info(...data: any[]): void {
+  info(...data: unknown[]): void {
     if (!this.LOG_LEVEL.info) return;
     console.write(getLogTime());
     console.info(`${ANSI_COLORS.intenseBlue}i${ANSI_COLORS.blue}`, ...data, ANSI_COLORS.reset);
@@ -686,7 +686,7 @@ export class Logger {
    *
    * @param data The data to be printed
    */
-  log(...data: any[]) {
+  log(...data: unknown[]) {
     if (!this.LOG_LEVEL.info) return;
     console.write(getLogTime());
     console.log('•', ...data);
@@ -759,7 +759,7 @@ export class Logger {
    * @param data The data for table
    * @param columns The columns to include in the table, if not provided all columns will be included
    */
-  table(data: Array<Record<string, any>>, columns?: Array<string>): void;
+  table(data: Array<Record<string, unknown>>, columns?: Array<string>): void;
   /**
    * Print a table to the console
    *
@@ -767,8 +767,8 @@ export class Logger {
    *
    * @param data The data to be printed
    */
-  table(data: Array<any>): void;
-  table(data: any, columns?: Array<string>): void {
+  table(data: Array<unknown>): void;
+  table(data: unknown, columns?: Array<string>): void {
     if (!this.LOG_LEVEL.info) return;
     console.write(getLogTime(), '\n');
     console.table(data, columns);
@@ -860,7 +860,7 @@ export class Logger {
    *
    * @param data The data to be printed
    */
-  trace(...data: any[]) {
+  trace(...data: unknown[]) {
     if (!this.LOG_LEVEL.verbose) return;
     console.write(getLogTime());
     console.trace(`${ANSI_COLORS.intenseMagenta}↳${ANSI_COLORS.magenta} Trace`, ...data, ANSI_COLORS.reset);
@@ -873,7 +873,7 @@ export class Logger {
    *
    * @param data The data to be printed
    */
-  warn(...data: any[]): void {
+  warn(...data: unknown[]): void {
     if (!this.LOG_LEVEL.warnings) return;
     console.write(getLogTime());
     console.warn(`${ANSI_COLORS.intenseYellow}⚠${ANSI_COLORS.yellow}`, ...data, ANSI_COLORS.reset);

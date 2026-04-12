@@ -11,13 +11,22 @@
     "docs": "typedoc",
     "docs:watch": "typedoc --watch",
     "demo": "bun demo.ts",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@eslint/json": "^1.2.0",
+    "@eslint/markdown": "^8.0.1",
     "@types/bun": "latest",
+    "eslint": "^10.2.0",
+    "globals": "^17.5.0",
+    "jiti": "^2.6.1",
     "prettier": "^3.8.2",
     "typedoc": "^0.28.19",
-    "typedoc-github-theme": "^0.4.0"
+    "typedoc-github-theme": "^0.4.0",
+    "typescript-eslint": "^8.58.1"
   },
   "peerDependencies": {
     "typescript": "^5"
