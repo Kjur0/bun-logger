@@ -1,7 +1,7 @@
 name: 'Report an Issue'
 description: Report an issue with the project
 title: '[Issue] '
-projects: ["Bun Logger"]
+projects: ['Bun Logger']
 body:
   - type: markdown
     attributes:
@@ -21,8 +21,6 @@ body:
           value: 'Community related'
         - label: 'Documentation related (missing documentation, typos, etc.)'
           value: 'Documentation related'
-        - label: 'Vulnerability related (security issues, exploits, etc.)'
-          value: 'Vulnerability related'
         - label: 'Dependency related (issues with dependencies, compatibility, etc.)'
           value: 'Dependency related'
         - label: 'Performance related (performance issues, optimizations, etc.)'
