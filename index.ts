@@ -495,7 +495,7 @@ export class Logger {
   assert(condition: boolean, ...data: unknown[]): void {
     if (!this.LOG_LEVEL.errors) return;
     if (!condition) console.write(this.scope, getLogTime());
-    console.assert(condition, `${ANSI_COLORS.intenseRed}✘${ANSI_COLORS.red}`, ...data, ANSI_COLORS.reset);
+    console.assert(condition, `${ANSI_COLORS.intenseRed}⁉${ANSI_COLORS.red}`, ...data, ANSI_COLORS.reset);
   }
 
   /**
@@ -597,7 +597,7 @@ export class Logger {
   error(...data: unknown[]) {
     if (!this.LOG_LEVEL.errors) return;
     console.write(getLogTime());
-    console.error(`${ANSI_COLORS.intenseRed}✖${ANSI_COLORS.red}`, ...data, ANSI_COLORS.reset);
+    console.error(`${ANSI_COLORS.intenseRed}✘${ANSI_COLORS.red}`, ...data, ANSI_COLORS.reset);
   }
 
   /**
@@ -876,7 +876,7 @@ export class Logger {
   warn(...data: unknown[]): void {
     if (!this.LOG_LEVEL.warnings) return;
     console.write(getLogTime());
-    console.warn(`${ANSI_COLORS.intenseYellow}⚠${ANSI_COLORS.yellow}`, ...data, ANSI_COLORS.reset);
+    console.warn(`${ANSI_COLORS.intenseYellow}!${ANSI_COLORS.yellow}`, ...data, ANSI_COLORS.reset);
   }
 }
 
