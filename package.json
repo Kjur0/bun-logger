@@ -10,10 +10,12 @@
     "typecheck:watch": "tsc --noEmit --watch",
     "docs": "typedoc",
     "docs:watch": "typedoc --watch",
-    "demo": "bun demo.ts"
+    "demo": "bun demo.ts",
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "prettier": "^3.8.2",
     "typedoc": "^0.28.19",
     "typedoc-github-theme": "^0.4.0"
   },

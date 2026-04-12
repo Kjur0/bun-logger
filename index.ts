@@ -453,16 +453,16 @@ export class Logger {
     if (args.length === 1) {
       if (typeof args[0] === 'string') {
         if (
-          args[0].toLowerCase() === 'none' ||
-          args[0].toLowerCase() === 'all' ||
-          args[0].toLowerCase() === 'verbose' ||
-          args[0].toLowerCase() === 'debug' ||
-          args[0].toLowerCase() === 'info' ||
-          args[0].toLowerCase() === 'warn' ||
-          args[0].toLowerCase() === 'warning' ||
-          args[0].toLowerCase() === 'warnings' ||
-          args[0].toLowerCase() === 'error' ||
-          args[0].toLowerCase() === 'errors'
+          args[0].toLowerCase() === 'none'
+          || args[0].toLowerCase() === 'all'
+          || args[0].toLowerCase() === 'verbose'
+          || args[0].toLowerCase() === 'debug'
+          || args[0].toLowerCase() === 'info'
+          || args[0].toLowerCase() === 'warn'
+          || args[0].toLowerCase() === 'warning'
+          || args[0].toLowerCase() === 'warnings'
+          || args[0].toLowerCase() === 'error'
+          || args[0].toLowerCase() === 'errors'
         ) {
           this.scope = '';
           this.LOG_LEVEL = getLogLevel(args[0] as LogLevelString);
