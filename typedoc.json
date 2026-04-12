@@ -1,0 +1,11 @@
+{
+  "entryPoints": ["./index.ts"],
+  "out": "./docs",
+  "exclude": ["**/node_modules/**", "**/dist/**", "**/build/**"],
+  "includeVersion": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeExternals": true,
+  "validation": true,
+  "plugin": ["typedoc-github-theme"]
+}

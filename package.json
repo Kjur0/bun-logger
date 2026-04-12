@@ -1,0 +1,33 @@
+{
+  "name": "bun-logger",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Kjur <krzysztof@jurkowski.net.pl>",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --noEmit --watch",
+    "docs": "typedoc",
+    "docs:watch": "typedoc --watch",
+    "demo": "bun demo.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typedoc": "^0.28.19",
+    "typedoc-github-theme": "^0.4.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "bun",
+      "onFail": "error"
+    },
+    "runtime": {
+      "name": "bun",
+      "onFail": "error"
+    }
+  }
+}
