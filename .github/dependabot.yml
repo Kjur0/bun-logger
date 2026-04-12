@@ -5,20 +5,20 @@
 
 version: 2
 updates:
-  - package-ecosystem: "bun" # See documentation for possible values
-    directory: "/" # Location of package manifests
-    assignees: ["Kjur0"]
+  - package-ecosystem: 'bun' # See documentation for possible values
+    directory: '/' # Location of package manifests
+    assignees: ['Kjur0']
     groups:
       security:
         applies-to: security-updates
-        patterns: ["*"]
+        patterns: ['*']
       major:
         applies-to: version-updates
-        patterns: ["*"]
-        update-types: [ major ]
+        patterns: ['*']
+        update-types: [major]
       minor:
         applies-to: version-updates
-        patterns: ["*"]
-        update-types: [ minor, patch ]
+        patterns: ['*']
+        update-types: [minor, patch]
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
