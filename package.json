@@ -4,8 +4,8 @@
   "license": "MIT",
   "keywords": [
     "bun",
-    "logger",
-    "log"
+    "logging",
+    "logger"
   ],
   "author": "Kjur <krzysztof@jurkowski.net.pl>",
   "homepage": "https://github.com/Kjur0/bun-logger",
