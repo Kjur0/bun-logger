@@ -1,0 +1,38 @@
+name: Feture request
+description: Suggest a new feature for the project
+title: '[Feature] '
+labels: [enhancement]
+projects: ['Bun Logger']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If you have an idea for a new feature, please provide as much information as possible to help us understand your suggestion.
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: 'Feature Description'
+      description: 'Please provide a detailed description of the feature you are suggesting.'
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: 'Use Case'
+      description: 'Please describe a use case for this feature and how it would benefit users.'
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 'Alternatives'
+      description: 'Please describe any alternative solutions you have considered and why you think this feature would be a better option.'
+    validations:
+      required: false
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: 'Additional Information'
+      description: 'Please provide any additional information that may be relevant to this feature suggestion.'
+    validations:
+      required: false

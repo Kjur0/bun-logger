@@ -1,0 +1,38 @@
+name: 'Report an Issue'
+description: Report an issue with the project
+title: '[Issue] '
+projects: ['Bun Logger']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If you have found a bug or have a feature request, please use specialized templates for them. This template is for general issues that don't fit into those categories.
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: 'Issue scope'
+      description: 'Please select the scope of issue you are reporting.'
+      options:
+        - label: 'GitHub/git related (repo issues, etc.)'
+          value: 'GitHub/git related'
+        - label: 'NPM related (package issues, etc.)'
+          value: 'NPM related'
+        - label: 'Community related (communication, moderation, etc.)'
+          value: 'Community related'
+        - label: 'Documentation related (missing documentation, typos, etc.)'
+          value: 'Documentation related'
+        - label: 'Dependency related (issues with dependencies, compatibility, etc.)'
+          value: 'Dependency related'
+        - label: 'Performance related (performance issues, optimizations, etc.)'
+          value: 'Performance related'
+        - label: 'Other'
+          value: 'Other'
+      validations:
+        required: true
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: 'Issue Description'
+      description: 'Please provide a detailed description of the issue you are facing.'
+    validations:
+      required: true
