@@ -2,7 +2,7 @@ name: Feture request
 description: Suggest a new feature for the project
 title: '[Feature] '
 labels: [enhancement]
-projects: ["Bun Logger"]
+projects: ['Bun Logger']
 body:
   - type: markdown
     attributes:
