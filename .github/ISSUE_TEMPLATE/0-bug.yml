@@ -2,7 +2,7 @@ name: Bug report
 description: Report a bug with the project
 title: '[Bug] <title>'
 labels: [bug]
-projects: ['@Kjur0/3']
+projects: ['Kjur0/3']
 body:
   - type: markdown
     attributes:
@@ -59,3 +59,5 @@ body:
     attributes:
       label: Environment
       description: Please provide information about your environmental variables (Logger configuration)
+    validations:
+      required: false
