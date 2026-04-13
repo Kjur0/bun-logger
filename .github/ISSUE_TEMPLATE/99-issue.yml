@@ -1,7 +1,7 @@
 name: Report an Issue
 description: Report an issue with the project
 title: '[Issue] <title>'
-projects: ['@Kjur0/3']
+projects: ['Kjur0/3']
 body:
   - type: markdown
     attributes:
