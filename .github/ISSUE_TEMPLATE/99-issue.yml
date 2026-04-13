@@ -1,4 +1,4 @@
-name: 'Report an Issue'
+name: Report an Issue
 description: Report an issue with the project
 title: '[Issue] <title>'
 projects: ['@Kjur0/3']
@@ -10,8 +10,8 @@ body:
   - type: dropdown
     id: issue-type
     attributes:
-      label: 'Issue scope'
-      description: 'Please select the scope of issue you are reporting.'
+      label: Issue scope
+      description: Please select the scope of issue you are reporting.
       options:
         - GitHub/git related (repo issues, etc.)
         - NPM related (package issues, etc.)
@@ -25,7 +25,7 @@ body:
   - type: textarea
     id: issue-description
     attributes:
-      label: 'Issue Description'
-      description: 'Please provide a detailed description of the issue you are facing.'
+      label: Issue Description
+      description: Please provide a detailed description of the issue you are facing.
     validations:
       required: true
