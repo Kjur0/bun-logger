@@ -1,8 +1,8 @@
 name: Bug report
 description: Report a bug with the project
-title: '[Bug] '
+title: '[Bug] <title>'
 labels: [bug]
-projects: ['Bun Logger']
+projects: ['@Kjur0/3']
 body:
   - type: markdown
     attributes:
