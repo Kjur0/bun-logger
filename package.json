@@ -30,7 +30,7 @@
     "@eslint/json": "^1.2.0",
     "@eslint/markdown": "^8.0.1",
     "@types/bun": "latest",
-    "eslint": "^10.2.0",
+    "eslint": "^10.2.1",
     "globals": "^17.5.0",
     "jiti": "^2.6.1",
     "prettier": "^3.8.2",
