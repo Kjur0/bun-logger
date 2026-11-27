@@ -30,13 +30,13 @@
     "@eslint/json": "^2.1.1",
     "@eslint/markdown": "^9.0.0",
     "@types/bun": "latest",
-    "eslint": "^10.14.0",
+    "eslint": "^10.15.0",
     "globals": "^17.14.0",
     "jiti": "^2.7.0",
-    "prettier": "^3.10.0",
+    "prettier": "^3.10.1",
     "typedoc": "^0.28.20",
     "typedoc-github-theme": "^0.4.0",
-    "typescript-eslint": "^8.72.2"
+    "typescript-eslint": "^8.73.0"
   },
   "peerDependencies": {
     "typescript": "^5"
